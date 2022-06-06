@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title%}Homepage Title{% endblock %}
+
+
+{% block content %}
+<script src="{% static 'resume/js/popup.js' %}"></script>
+
+
+<h1> This is my homepage! </h1>
+
+
+<br/><br/>
+{% for name in names %}
+    {{name}}
+    <br/>
+{% endfor %}
+
+<br/><br/>
+{{myname}}
+
+<br/><br/>
+<img src="{% static 'resume/images/minnie.jpg' %}" width="500">
+
+<br/><br/>
+<button onclick="myFunction()">Push the button!</button>
+
+{% endblock %}

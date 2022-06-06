@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title%}About Title{% endblock %}
+
+{% block content %}
+
+This is my about page! My name is {% include 'snippets/my_name.html' %}.
+
+<br/><br/>
+- {{ first_name }} {{last_name|capfirst|cut:"a"}}
+
+<br/><br/>
+
+{% if first_name == "Lucas" %}
+    Hello {{ first_name }}!
+{% else %}
+    Hello Stranger!
+{% endif %}
+
+
+{% endblock %}
